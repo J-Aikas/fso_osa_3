@@ -1,0 +1,7 @@
+PUT http://localhost:8080/api/persons/63baedaec6f91f8f57aabdad
+Content-Type: application/json
+
+{
+  "name": "Kurt Schnitzelstein",
+  "number": "019 667178"
+}
