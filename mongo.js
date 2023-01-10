@@ -12,10 +12,10 @@ const url = `mongodb+srv://newlandian:${password}@cluster0.7svon8g.mongodb.net/p
 mongoose.connect(url)
 
 const personSchema = mongoose.Schema({
-    name: String,
-    number: String,
-  })
-  
+  name: String,
+  number: String,
+})
+
 const Person = mongoose.model('Person', personSchema)
 
 if (process.argv.length > 3) {
@@ -23,7 +23,7 @@ if (process.argv.length > 3) {
     name: process.argv[3],
     number: process.argv[4],
   })
-  
+
   person.save().then(res => {
     console.log(`added ${res.name} ${res.number} to phonebook`)
     mongoose.connection.close()
